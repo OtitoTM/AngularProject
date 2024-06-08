@@ -11,8 +11,8 @@
 .navbar{
     position: fixed;
     width: 100%;
-    height: 10%;
-    background: #33333334;
+    height: 7%;
+    background: #33333327;
 }
 .navbar a {
     float: left;
