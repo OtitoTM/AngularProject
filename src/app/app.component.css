@@ -1,4 +1,110 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px #00000091;
+    background: #0000009c;
+}
+#chk1{
+    display: none;
+}
+i{
+    color: white;
+    cursor: pointer;
+}
+
+header .search-box{
+    flex: 1;
+    position: relative;
+}
+.search-box input{
+    width: 40%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: white;
+    border-radius: 30px;
+    color: gray;
+    font-size: 16px;
+    text-align: center;
+}
+
+.search-box button{
+    cursor:pointer ;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right:0;
+    transform: scale(0.9);
+    background: green;
+}
+
+header ul{
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+header ul li a:hover{
+    border-bottom: 2px solid cadetblue;
+}
+header .menu{
+    font-size: 2.5em;
+    display: none;
+}
+@media (max-width:1000px){
+    .search-box button{
+        position: absolute;
+    }
+    header ul{
+        position: fixed;
+        top: 100px;
+        right: -100%;
+        background:rgba(0, 0, 0, 0.5);
+        height: calc((100vh - 100px));
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+    header .menu{
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+    #chk1:checked ~ ul{
+        right: 0;
+    }
+}
+
+@media (max-width:600px) {
+    header ul{
+        width: 100%;
+    }
+}
 .MainContainer{
     height:100vh;
     width: 100%;
@@ -10,29 +116,6 @@
             align-items: center;
             justify-content: center;
 }
-
-.navbar{
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 7%;
-    background: #33333327;
-}
-.navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
 .container3 {
     display: flex;
     flex-direction: column;
@@ -48,13 +131,13 @@
     gap: 10px;
 }
 
-@media only screen and (min-width: 728px) {
+/* @media only screen and (min-width: 728px) {
     .container3 {
         width: 100%;
         height: 100%;
 
     }
-}
+} */
 
 .container3 form {
     display: flex;
