@@ -64,11 +64,13 @@ header ul li a:hover {
     background:linear-gradient(rgba(0, 0, 0, 0.582), rgba(76, 0, 130, 0.541)), url(./meeting.jpg);
         background-position: center;
         background-size: cover;
+        background-attachment: fixed;
+        border: none;
 }
 
 .container3 {
     background-color: #f4f4f4b4;
-    padding: 20px;
+    padding: 50px;
     margin-bottom: 20px;
     border-radius: 5px;
 }
@@ -123,4 +125,10 @@ header ul li a:hover {
 
 .footer p {
     margin: 5px 0 0;
+}
+.footer li a{
+    color: white;
+    padding: 10px;
+    padding-top: 2px;
+    justify-content: space-between;
 }
