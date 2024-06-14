@@ -1,7 +1,7 @@
         body {
             font-family: Arial, sans-serif;
             background: rgb(160, 166, 29);
-            background: linear-gradient(90deg, rgba(71, 73, 23, 0.438) 0%, rgba(8, 8, 29, 0.6082808123249299) 35%, rgba(77, 155, 170, 0.432) 100%), url(./pc-mouse-625159_640.jpg);
+            background: linear-gradient(90deg, rgba(71, 73, 23, 0.438) 0%, rgba(8, 8, 29, 0.6082808123249299) 35%, rgba(77, 155, 170, 0.432) 100%), url(../../assets/pc-mouse-625159_640.jpg);
             background-position: center;
             background-size: cover;
             background-attachment: fixed;
