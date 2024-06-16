@@ -10,15 +10,17 @@
     </div>
     <div class="container">
         <h1>Computer and Accessories</h1>
-    <div class="images">
-        <img *ngFor="let image of images" [src]="image.src" [alt]="image.alt" [class.selected]="image === selectedImage"
-            (click)="selectImage(image)">
-    </div>
+        <div class="images">
+            <img *ngFor="let image of images" [src]="image.src" [alt]="image.alt" [class.selected]="image === selectedImage"
+                (click)="handleImageClick(image)">
         </div>
-    <div class="Cart">
-        <button id="add-to-cart" (click)="addToCart()" [disabled]="!selectedImage">ADD TO CART</button>
     </div>
-
-</body>
+    <div class="Cart">
+        <button id="add-to-cart" (click)="addToCart()">ADD TO CART</button>
+    </div>
+    
+    <!-- Notification Message -->
+    <div *ngIf="message" class="message">{{ message }}</div>
+    </body>
 
 

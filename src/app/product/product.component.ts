@@ -24,17 +24,29 @@ export class ProductComponent {
 
   selectedImage: Image | null = null;
   cart: Image[] = [];
+  message: string | null = null;
 
-  selectImage(image: Image) {
-    this.selectedImage = image;
+  handleImageClick(image: Image) {
+    if (this.selectedImage === image) {
+      if (confirm('Are you sure you want to add this item again?')) {
+        this.addToCart();
+      }
+    } else {
+      this.selectedImage = image;
+    }
   }
 
   addToCart() {
     if (this.selectedImage) {
       this.cart.push(this.selectedImage);
+      this.message = 'Item has been added to the cart!';
       console.log('Image added to cart:', this.selectedImage);
       console.log('Current cart:', this.cart);
-      this.selectedImage = null; // Deselect image after adding to cart
+      setTimeout(() => this.message = null, 3000); // Clear message after 3 seconds
+      this.selectedImage = null; 
+    } else {
+      this.message = 'No item selected';
+      setTimeout(() => this.message = null, 3000); // Clear message after 3 seconds
     }
   }
 }
