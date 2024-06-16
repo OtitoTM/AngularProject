@@ -14,7 +14,6 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'Join The Team';
-
   
 }
 
